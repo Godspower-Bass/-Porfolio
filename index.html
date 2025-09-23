@@ -25,6 +25,7 @@
         <a href="#contact">Contact</a>
       </nav>
     </header>
+
     <!-- home section design -->
     <section class="home" id="home">
       <div class="home-content">
@@ -58,7 +59,6 @@
           I specialize in building modern, responsive websites and applications
           <br />that blend elegant design with powerful functionality.
         </p>
-
         <a href="" class="btn">Read More</a>
       </div>
     </section>
@@ -66,7 +66,6 @@
     <!-- services section design -->
     <section class="services" id="services">
       <h2 class="heading">Core<span>Skills</span></h2>
-
       <div class="services-container">
         <div class="services-box">
           <i class="fa-solid fa-code"></i>
@@ -102,7 +101,7 @@
             services." <br />
             RESTful & GraphQL APIs Payment gateways (Stripe, Paystack) <br />
             Email (SendGrid, Mailchimp) <br />
-            External APIs (Weather, Maps,)
+            External APIs (Weather, Maps)
           </p>
           <a href="#" class="btn">Read More</a>
         </div>
@@ -124,21 +123,41 @@
     <!-- contact section design -->
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Me!</span></h2>
-      <form action="#">
+      <form id="contact-form">
         <div class="input-box">
-          <input type="text" placeholder="Full Name" />
-          <input type="email" placeholder="Email Address" />
+          <input
+            type="text"
+            name="from_name"
+            placeholder="Full Name"
+            required
+          />
+          <input
+            type="email"
+            name="from_email"
+            placeholder="Email Address"
+            required
+          />
         </div>
         <div class="input-box">
-          <input type="number" placeholder="Mobile Number" />
-          <input type="text" placeholder="Email Subject" />
+          <input
+            type="number"
+            name="mobile_number"
+            placeholder="Mobile Number"
+            required
+          />
+          <input
+            type="text"
+            name="subject"
+            placeholder="Email Subject"
+            required
+          />
         </div>
         <textarea
-          name=""
-          id=""
+          name="message"
           cols="30"
           rows="10"
           placeholder="Your Message"
+          required
         ></textarea>
         <input type="submit" value="Send Message" class="btn" />
       </form>
@@ -159,6 +178,29 @@
 
     <!-- typed js -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("IaLO8_KtJ7UIAKnI8"); // Replace with your EmailJS user ID
+      })();
+
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent page refresh
+          emailjs.sendForm("service_ca21cp5", "template_otrsohs", this).then(
+            () => {
+              alert("Message sent successfully!");
+              this.reset(); // Clear the form
+            },
+            (error) => {
+              alert("Oops... something went wrong.\n" + JSON.stringify(error));
+            }
+          );
+        });
+    </script>
 
     <!-- your custom js -->
     <script src="script.js"></script>
