@@ -51,7 +51,7 @@
     <section class="about" id="about">
       <div class="about-content">
         <h2 class="heading">About <span>Me</span></h2>
-        <h3>Fullstack Developer</h3>
+        <h3 class="h3">Fullstack Developer</h3>
         <p>
           Hi! I’m God'spower Bass, <br />
           a passionate Full-Stack Developer based in the city of Lagos, Nigeria.
@@ -59,11 +59,32 @@
           I specialize in building modern, responsive websites and applications
           <br />that blend elegant design with powerful functionality.
         </p>
-        <a href="" class="btn">Read More</a>
+        <!-- Hidden full text -->
+    <div id="more-text" style="display: none;">
+      <p>
+        My expertise includes HTML, CSS, JavaScript, React, Node.js, and database management with MongoDB, and MySQL. 
+        I enjoy crafting intuitive user interfaces and robust backend systems that solve real-world problems.
+      </p>
+      <p>
+        Apart from coding, I am passionate about learning new technologies, collaborating with creative teams, and exploring solutions 
+        that push the boundaries of web development. I believe that good design combined with clean, maintainable code can create 
+        experiences that truly delight users.
+      </p>
+      <p>
+        When I’m not coding, I enjoy reading about technology trends, experimenting with personal projects, and contributing to 
+        open-source initiatives. My goal is to keep growing as a developer and to bring elegant, efficient, and innovative solutions 
+        to every project I work on.
+      </p>
+    </div>
+
+    <button id="read-more-btn" class="btn">Read More</button>
+  </div>
+</section>
+
       </div>
     </section>
 
-    <!-- services section design -->
+    <!-- core skills section design -->
     <section class="services" id="services">
       <h2 class="heading">Core<span>Skills</span></h2>
       <div class="services-container">
@@ -77,7 +98,6 @@
             SPA (Single Page Application) builds Responsive layout for all
             devices
           </p>
-          <a href="#" class="btn">Read More</a>
         </div>
 
         <div class="services-box">
@@ -90,7 +110,6 @@
             RESTful APIs or GraphQL Secure authentication & authorization
             systems.
           </p>
-          <a href="#" class="btn">Read More</a>
         </div>
 
         <div class="services-box">
@@ -103,7 +122,6 @@
             Email (SendGrid, Mailchimp) <br />
             External APIs (Weather, Maps)
           </p>
-          <a href="#" class="btn">Read More</a>
         </div>
 
         <div class="services-box">
@@ -115,8 +133,7 @@
             Bug fixing <br />
             Feature enhancements Backup & recovery
           </p>
-          <a href="#" class="btn">Read More</a>
-        </div>
+       </div>
       </div>
     </section>
 
@@ -206,5 +223,6 @@
     <script src="script.js"></script>
   </body>
 </html>
+
 
 
