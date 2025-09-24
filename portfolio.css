@@ -8,6 +8,17 @@
   border: none;
   scroll-behavior: smooth;
 }
+
+.h3 {
+  color: turquoise;
+}
+
+#more-text {
+  margin-top: 15px;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+}
+
 :root {
   --bg-color: #1f242d;
   --second-bg-color: #323946;
@@ -62,7 +73,10 @@ section {
 
 .navcon a:hover,
 .navcon a.active {
-  color: var(--main-color);
+  border-bottom: 2px solid #00eaff;
+  padding-bottom: 6px;
+  color: #00eaff;
+  text-shadow: 0 0 10px #00eaff;
 }
 
 #menu-icon {
@@ -160,11 +174,13 @@ span {
 .about-content p {
   font-size: 1.6rem;
   margin: 2rem 0 3rem;
+  color: #d3d3d3;
 }
 
 .heading {
   text-align: center;
   font-size: 4.5rem;
+  color: #d3d3d3;
 }
 
 .services h2 {
